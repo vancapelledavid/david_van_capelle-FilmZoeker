@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(227, 226, 221);
+  background-image: -webkit-linear-gradient(
+    top,
+    rgb(179, 179, 176) 0%,
+    rgb(227, 226, 221) 500px
+  );
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  &__banner {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    height: 48px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+  }
+
+  &__logo {
+    display: inline-block;
+    background-color: #f3ce13;
+    color: black;
+    height: 32px;
+    width: 64px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 5px;
+  }
+
+  &__textbox {
+    display: inline-block;
+    height: 32px;
+    border-radius: 5px;
+    width: 30%;
+    transition: width 0.15s ease-in-out;
+
+    &:focus {
+      width: 50%;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-flow: column;
+  background-color: #f3ce13;
+  color: black;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 5px 0 5px 30vw;
+  font-size: 20px;
+  overflow: hidden;
+  min-width: 405px;
+
+  &__radio {
+    display: inline-block;
+
+    & > * {
+      display: inline-block;
+      cursor: pointer;
+      padding: 0 20px;
+    }
+  }
+}
+
+.allfilms {
+  width: 100%;
+  justify-content: center;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat (1, 1fr);
+    grid-gap: 10px;
+    width: fit-content;
+    margin: 205px auto;
+
+    &-item {
+      display: inline-block;
+      width: 300px;
+      height: 400px;
+    }
+  }
+}
+
+img {
+  width: 300px;
+  height: 400px;
+}
+
+@media (min-width: 860px) {
+  .buttons {
+    flex-flow: row wrap;
+    align-content: space-around;
+    line-height: 35px;
+    padding: 10px 30px;
+  }
+
+  .allfilms__list {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 145px auto;
+  }
+}
+
+@media (min-width: 1155px) {
+  .buttons {
+    //flex-direction: row;
+    height: 48px;
+    line-height: 48px;
+    padding: 0;
+  }
+
+  .allfilms__list {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 105px auto;
+  }
+}
+
+@media (min-width: 1600px) {
+  .allfilms__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DavidMovieDatabase</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <script defer src="./movies.js"></script>
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <banner id="header__banner" class="header__banner">
+            <div class="header__logo">
+                <p>DMDb</p>
+            </div>
+            <input id="header__textbox" class="header__textbox" type="text" autocomplete="off" name="search"
+                placeholder="Search film..">
+        </banner>
+
+        <nav id="buttons" class="buttons">
+            <div class="buttons__radio buttons__radio--all">
+                <input class="buttons__input" name="filter" type="radio" id="all" value="all">
+                <label for="all">Alle Films</label>
+            </div>
+            <div class="buttons__radio buttons__radio--nieuwste">
+                <input class="buttons__input" name="filter" type="radio" id="nieuwste" value="nieuwste">
+                <label for="nieuwste">Laatste Films, vanaf 2014</label>
+            </div>
+            <div class="buttons__radio buttons__radio--avengers">
+                <input class="buttons__input" name="filter" type="radio" id="avengers" value="avengers">
+                <label for="avengers">Avenger Films</label>
+            </div>
+            <div class="buttons__radio buttons__radio--x-men">
+                <input class="buttons__input" name="filter" type="radio" id="x-men" value="x-men">
+                <label for="x-men">X-Men Films</label>
+            </div>
+            <div class="buttons__radio buttons__radio--princess">
+                <input class="buttons__input" name="filter" type="radio" id="princess" value="princess">
+                <label for="princess">Princess Films</label>
+            </div>
+            <div class="buttons__radio buttons__radio--batman">
+                <input class="buttons__input" name="filter" type="radio" id="batman" value="batman">
+                <label for="batman">Batman Films</label>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="allfilms" class="allfilms">
+            <ul id="allfilms__list" class="allfilms__list">
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>
